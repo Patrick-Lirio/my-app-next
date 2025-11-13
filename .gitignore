@@ -1,41 +1,40 @@
+@ -1,39 +0,0 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# Dependencies
 /node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+/.pnpm
+pnpm-lock.yaml
 
-# testing
-/coverage
-
-# next.js
+# Build outputs
 /.next/
 /out/
+/build/
 
-# production
-/build
+# TypeScript cache
+*.tsbuildinfo
+next-env.d.ts
 
-# misc
-.DS_Store
-*.pem
+# Local Environment Variables
+# Exclude all .env files except for .env.example.
+# .env.local contains secrets and should NEVER be committed.
+.env.*.local
+.env.local
 
-# debug
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# vercel
+# Vercel
 .vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
